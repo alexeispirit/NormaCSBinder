@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormaCSBinder", "NormaCSBin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{27756760-EE5B-4D48-9E06-1F160FD4196D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringExtender", "StringExtender\StringExtender.csproj", "{02036988-3538-499B-A19B-E43FC7E96731}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{27756760-EE5B-4D48-9E06-1F160FD4196D}.Release|Mixed Platforms.Build.0 = Release|x86
 		{27756760-EE5B-4D48-9E06-1F160FD4196D}.Release|x86.ActiveCfg = Release|x86
 		{27756760-EE5B-4D48-9E06-1F160FD4196D}.Release|x86.Build.0 = Release|x86
+		{02036988-3538-499B-A19B-E43FC7E96731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{02036988-3538-499B-A19B-E43FC7E96731}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

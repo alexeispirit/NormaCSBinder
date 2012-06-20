@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NormaCSBinder;
+using StringExtender;
 
 namespace TestProject
 {
@@ -19,11 +20,13 @@ namespace TestProject
             sl1.Add(s1);
             sl1.Add(s2);
 
-            
+            string str = "333-sss";
+            str.removePattern(@"\w{3}");
             NormaCS ncs = new NormaCS(sl1);
-            ncs.checkStandards();
+            //ncs.checkStandards();
             foreach (Document doc in ncs.Documents)
                 Console.WriteLine(doc);
+
             Console.ReadKey();
         }
     }
