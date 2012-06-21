@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace ReportWindow
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for Main.xaml
     /// </summary>
     public partial class Main 
     {
-        public Main()
+        public Main(IEnumerable<Pair> col)
         {
             InitializeComponent();
+            NormaCSDocsDataGrid.DataContext = col;
+            //DataGrid dg = (DataGrid) this.FindName("NormaCSDocsDataGrid");
+            //dg.DataContext = col;
+
         }
+    }
+
+    public class Pair
+    {
+        public int x { get; set; }
+        public int y { get; set; }
     }
 }
