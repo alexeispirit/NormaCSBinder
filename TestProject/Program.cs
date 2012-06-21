@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NormaCSBinder;
 using StringExtender;
-using Newtonsoft.Json;
+using NormaCSBinder;
 using Logger;
+using ConfigManager;
 
 namespace TestProject
 {
@@ -21,7 +21,9 @@ namespace TestProject
             sl1.Add(s1);
             sl1.Add(s2);
 
-            Logger.Logger.Error("AAAAAAAAAAAAAxxxAAAA", "MAIN");
+            ConfigManager.ConfigManager cm = new ConfigManager.ConfigManager(@"settings.json");
+            Console.WriteLine(cm.Configuration.AutoCADPatterns[0]);
+
 
             string str = "333-sss";
             str.removePattern(@"\w{3}");

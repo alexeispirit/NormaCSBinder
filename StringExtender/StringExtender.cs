@@ -12,5 +12,13 @@ namespace StringExtender
         {
             return Regex.Replace(str, pattern, "");            
         }
+
+        public static string removeAutoCADFormat(this String str)
+        {
+            ConfigManager.ConfigManager conf = new ConfigManager.ConfigManager(ConfigManager.Default.ConfigFile);
+            foreach (string pat in conf.Configuration.AutoCADPatterns)
+                str = str.removePattern(pat);
+            return str;
+        }
     }
 }
