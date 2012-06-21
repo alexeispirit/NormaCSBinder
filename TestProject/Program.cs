@@ -6,11 +6,22 @@ using StringExtender;
 using NormaCSBinder;
 using Logger;
 using ConfigManager;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Threading;
 
 namespace TestProject
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             Standard s1 = new Standard("ГОСТ Р 21.1101-2009");
@@ -36,7 +47,11 @@ namespace TestProject
             foreach (Document doc in ncs.Documents)
                 Console.WriteLine(doc);
 
-            Console.ReadKey();
+            ReportWindow.Main mn = new ReportWindow.Main();
+
+            mn.InitializeComponent();
+
+            
         }
 
 

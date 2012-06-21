@@ -11,10 +11,11 @@ namespace ConfigManager
     /// </summary>
     public class Config
     {
-        public string[] AutoCADPatterns { get; set; }
-        public string[] RevitPatterns { get; set; }
-        public string[] InventorPatterns { get; set; }
-        public string[] WhiteList { get; set; }
-        public string[] BlackList { get; set; }
+        public string[] AutoCADPatterns { get; set; } // AutoCAD String Format Patterns
+        public string[] RevitPatterns { get; set; } // Revit String Format Patterns
+        public string[] InventorPatterns { get; set; } // Inventor String Format Patterns
+        public string[] WhiteList { get; set; } // Whitelist 
+        public string[] BlackList { get; set; } // Blacklist
+        public string RegExp { get; set; } // Regular Expression to searh for in text
     }
 }

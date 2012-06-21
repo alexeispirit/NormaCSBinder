@@ -6,11 +6,11 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{27756760-EE5B-4D48-9E06-1F160FD4196D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestProject</RootNamespace>
     <AssemblyName>TestProject</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -34,13 +34,20 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -61,6 +68,10 @@
     <ProjectReference Include="..\NormaCSBinder\NormaCSBinder.csproj">
       <Project>{A5B779A5-8719-4CC4-A4DC-1B7DA2D64170}</Project>
       <Name>NormaCSBinder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportWindow\ReportWindow.csproj">
+      <Project>{2F5E2B38-3A72-4479-8FE2-77E92F4F211E}</Project>
+      <Name>ReportWindow</Name>
     </ProjectReference>
     <ProjectReference Include="..\StringExtender\StringExtender.csproj">
       <Project>{02036988-3538-499B-A19B-E43FC7E96731}</Project>

@@ -23,5 +23,6 @@
 		"ГОСТ",
 		"СНиП"
 	],
-	"BlackList" : null
+	"BlackList" : null,
+	"RegExp" : "([А-Яа-я ]{2,9} [0-0.-]{2,})"
 }
