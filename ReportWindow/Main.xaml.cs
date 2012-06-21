@@ -17,17 +17,11 @@ namespace ReportWindow
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class Main : UserControl
+    public partial class Main 
     {
         public Main()
         {
             InitializeComponent();
         }
-    }
-
-    public class Pair
-    {
-        public int x { get; set; }
-        public int y { get; set; }
     }
 }

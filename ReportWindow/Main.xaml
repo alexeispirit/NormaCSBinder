@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ReportWindow.Main"
+﻿<Window x:Class="ReportWindow.Main"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,4 +8,4 @@
     <Grid>
         <DataGrid AutoGenerateColumns="true" Height="282" HorizontalAlignment="Left" Name="NormaCSDocsDataGrid" VerticalAlignment="Top" Width="503" ItemsSource="{Binding}" />            
     </Grid>
-</UserControl>
+</Window>

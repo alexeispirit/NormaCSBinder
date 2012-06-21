@@ -47,13 +47,25 @@ namespace TestProject
             foreach (Document doc in ncs.Documents)
                 Console.WriteLine(doc);
 
+            List<Pair> lst = new List<Pair>();
+            lst.Add(new Pair() { x = 1, y = 1 });
+            lst.Add(new Pair() { x = 2, y = 2 });
+            lst.Add(new Pair() { x = 3, y = 3 });
+
+
             ReportWindow.Main mn = new ReportWindow.Main();
-
             mn.InitializeComponent();
-
-            
+            DataGrid dg = (DataGrid) mn.FindName("NormaCSDocsDataGrid");
+            dg.DataContext = lst;
+            Application app = new Application();
+            app.Run(mn);
         }
-
-
     }
+
+    public class Pair
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+    }
+
 }
