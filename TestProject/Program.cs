@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using NormaCSBinder;
 using StringExtender;
+using Newtonsoft.Json;
+using Logger;
 
 namespace TestProject
 {
@@ -16,9 +18,10 @@ namespace TestProject
             HashSet<Standard> sl1 = new HashSet<Standard>();
             HashSet<Standard> sl2 = new HashSet<Standard>();
 
-            
             sl1.Add(s1);
             sl1.Add(s2);
+
+            Logger.Logger.Error("AAAAAAAAAAAAAxxxAAAA", "MAIN");
 
             string str = "333-sss";
             str.removePattern(@"\w{3}");
@@ -29,5 +32,7 @@ namespace TestProject
 
             Console.ReadKey();
         }
+
+
     }
 }

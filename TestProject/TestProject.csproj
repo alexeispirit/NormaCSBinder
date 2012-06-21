@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\dotNetLibs\Json45r7\Bin\Net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{C7D34F36-D9C2-4217-99C7-D432E70A660E}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NormaCSBinder\NormaCSBinder.csproj">
       <Project>{A5B779A5-8719-4CC4-A4DC-1B7DA2D64170}</Project>
       <Name>NormaCSBinder</Name>
