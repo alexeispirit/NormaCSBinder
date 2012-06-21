@@ -14,5 +14,7 @@ namespace ConfigManager
         public string[] AutoCADPatterns { get; set; }
         public string[] RevitPatterns { get; set; }
         public string[] InventorPatterns { get; set; }
+        public string[] WhiteList { get; set; }
+        public string[] BlackList { get; set; }
     }
 }

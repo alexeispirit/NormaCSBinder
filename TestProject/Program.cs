@@ -13,7 +13,7 @@ namespace TestProject
     {
         static void Main(string[] args)
         {
-            Standard s1 = new Standard("ГОСТ Р", "21.1101");
+            Standard s1 = new Standard("ГОСТ Р 21.1101-2009");
             Standard s2 = new Standard("ГОСТ", "2.101");
             HashSet<Standard> sl1 = new HashSet<Standard>();
             HashSet<Standard> sl2 = new HashSet<Standard>();
@@ -21,12 +21,16 @@ namespace TestProject
             sl1.Add(s1);
             sl1.Add(s2);
 
-            ConfigManager.ConfigManager cm = new ConfigManager.ConfigManager(@"settings.json");
-            Console.WriteLine(cm.Configuration.AutoCADPatterns[0]);
+            string[] test = { "tesT", "best", "rest" };
+            IEnumerable<string> tt = test.Take(test.Length - 1).ToList();
+
+            ConfigManager.ConfigManager cm = ConfigManager.ConfigManager.Instance;
+            HashSet<Document> s1d = s1.Check();
+            Console.WriteLine(s1d.First());
 
 
-            string str = "333-sss";
-            str.removePattern(@"\w{3}");
+            string str = "333-ГОСТ--444";
+            Console.WriteLine(str.cleanAllWithWhiteList());
             NormaCS ncs = new NormaCS(sl1);
             //ncs.checkStandards();
             foreach (Document doc in ncs.Documents)

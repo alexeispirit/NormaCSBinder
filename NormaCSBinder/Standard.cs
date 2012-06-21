@@ -9,6 +9,14 @@ namespace NormaCSBinder
     /// </summary>
     public class Standard
     {
+        public Standard(string joined)
+        {
+            string[] props = joined.Split(' ');
+            this.Number = props.Last();
+            this.Index = String.Join(" ", props.Take(props.Length - 1).ToArray());
+            this.HasNormaCSReference = false;
+        }
+
         /// <summary>
         /// Standard constructor
         /// </summary>
@@ -20,6 +28,7 @@ namespace NormaCSBinder
             this.Number = number;
             this.HasNormaCSReference = false;
         }
+
 
         public string Index { get; set; } // Standard Index
         public string Number { get; set; } // Standard Number

@@ -14,11 +14,13 @@ namespace ConfigManager
     /// </summary>
     public class ConfigManager
     {
+        private static ConfigManager instance;
+
         /// <summary>
         /// CM Constructor
         /// </summary>
         /// <param name="filename">settings filename</param>
-        public ConfigManager(string filename)
+        private ConfigManager(string filename)
         {
             this.FileName = filename;
             try
@@ -29,6 +31,18 @@ namespace ConfigManager
             catch (IOException e)
             {
                 Logger.Logger.Error(e, this.GetType().Name);
+            }
+        }
+
+        public static ConfigManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new ConfigManager(Default.ConfigFile);
+                }
+                return instance;
             }
         }
 
