@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using NormaCSBinder;
 
 namespace ReportWindow
 {
@@ -19,19 +21,25 @@ namespace ReportWindow
     /// </summary>
     public partial class Main 
     {
-        public Main(IEnumerable<Pair> col)
+        /// <summary>
+        /// Initialize window and bind data
+        /// </summary>
+        /// <param name="docs">NormaCSBinder.Document collection</param>
+        public Main(IEnumerable<Document> docs)
         {
             InitializeComponent();
-            NormaCSDocsDataGrid.DataContext = col;
-            //DataGrid dg = (DataGrid) this.FindName("NormaCSDocsDataGrid");
-            //dg.DataContext = col;
-
+            NormaCSDocsDataGrid.DataContext = docs;
         }
-    }
 
-    public class Pair
-    {
-        public int x { get; set; }
-        public int y { get; set; }
+        /// <summary>
+        /// NormaCS Hyperlink click event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            Hyperlink link = e.OriginalSource as Hyperlink;
+            Process.Start(link.NavigateUri.AbsoluteUri);
+        }
     }
 }

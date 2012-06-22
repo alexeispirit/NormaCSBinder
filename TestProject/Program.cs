@@ -43,27 +43,12 @@ namespace TestProject
             string str = "333-ГОСТ--444";
             Console.WriteLine(str.cleanAllWithWhiteList());
             NormaCS ncs = new NormaCS(sl1);
-            //ncs.checkStandards();
-            foreach (Document doc in ncs.Documents)
-                Console.WriteLine(doc);
+            ncs.checkStandards();
 
-            List<ReportWindow.Pair> lst = new List<ReportWindow.Pair>();
-            lst.Add(new ReportWindow.Pair() { x = 1, y = 1 });
-            lst.Add(new ReportWindow.Pair() { x = 2, y = 2 });
-            lst.Add(new ReportWindow.Pair() { x = 3, y = 3 });
-
-
-            ReportWindow.Main mn = new ReportWindow.Main(lst);
+            ReportWindow.Main mn = new ReportWindow.Main(ncs.Documents);
 
             Application app = new Application();
             app.Run(mn);
         }
     }
-
-    public class Pair
-    {
-        public int x { get; set; }
-        public int y { get; set; }
-    }
-
 }

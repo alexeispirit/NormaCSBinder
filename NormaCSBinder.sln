@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{C7D34F36-D9C2-4217-99C7-D432E70A660E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportWindow", "ReportWindow\ReportWindow.csproj", "{2F5E2B38-3A72-4479-8FE2-77E92F4F211E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A5B779A5-8719-4CC4-A4DC-1B7DA2D64170} = {A5B779A5-8719-4CC4-A4DC-1B7DA2D64170}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
